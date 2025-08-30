@@ -1,14 +1,55 @@
-# Sustainable Farming Agent System
+# AakashGyan: AI Agents for Bharat's Development
 
-Multi-agent framework using Pydantic AI and LangGraph. This project implements a multi-agent sustainable farming system that helps users plan their perfect farming requirements through an interactive Streamlit UI.
+[![IBM](https://img.shields.io/badge/Powered%20by-IBM%20Granite%20%26%20ADK-blue?style=for-the-badge)](https://www.ibm.com)
+[![Hackathon](https://img.shields.io/badge/IBM-Hackathon-FF6B00?style=for-the-badge)](https://www.ibm.com)
 
-![Agent Graph](extras/Sustainable_farming_agent.jpg)
+A suite of Agentic AI workflows built using IBM's ADK and Granite models to autonomously tackle real-world challenges in agriculture, healthcare, and public services in India.
 
-## Overview
+![AakashGyan Architecture](extras/AakashGyan_architecture.jpg)
 
-This project implements a sophisticated planning system that uses multiple specialized AI agents working in parallel to create comprehensive plans. The system collects user preferences and details through a conversational interface, then simultaneously processes all recommendations before combining them into a final plan.
+## 🌟 Overview
 
-All tool calls for the agents are mocked, so this is using offline synthetic data provided! This is simply built as an example, focusing on the agent architecture instead of the tooling.
+AakashGyan (Sky Knowledge) is an innovative multi-agent AI system designed specifically for Indian agricultural challenges. This project implements IBM's Agent Development Kit (ADK) and Granite series models to create specialized AI agents that work in parallel to provide comprehensive farming solutions through an interactive interface.
+
+## 🚀 Features
+
+- **KrishiSahayak**: AI agent for crop disease diagnosis and treatment advice via SMS in regional languages
+- **ArogyaMitra**: Healthcare triage agent for preliminary diagnosis and medical guidance
+- **VidyutSarthi**: Government scheme navigation agent for subsidies and compliance
+- **Multi-lingual Support**: Hindi, English, and regional language support
+- **Real-time Data Integration**: Weather, market prices, and government scheme updates
+- **SMS/WhatsApp Interface**: Accessible to farmers with basic mobile phones
+
+## 🏗️ Architecture
+
+The system consists of five specialized agents powered by IBM's technology stack:
+
+1. **Info Gathering Agent**: Collects farmer details, location, and problem description
+2. **Sustainability Agent**: Recommends sustainable farming practices and environmental impact reduction
+3. **Farm Advisor Agent**: Suggests data-driven farming practices based on local conditions
+4. **Market Intelligence Agent**: Provides real-time market prices and demand forecasts
+5. **Final Planner Agent**: Aggregates all recommendations into actionable farming plans
+
+These agents are orchestrated through IBM ADK workflows enabling parallel execution and dynamic routing.
+
+## 🔧 Technical Stack
+
+- **IBM Agent Development Kit (ADK)**: Core agent orchestration framework
+- **IBM Granite Models**: Granite-13B-Code for logic and Granite-8B-Language for regional language processing
+- **Python 3.11+**: Backend implementation
+- **Streamlit**: Interactive web interface
+- **ChromaDB**: Vector database for agricultural knowledge base
+- **Twilio API**: SMS integration for rural accessibility
+
+## 📋 Installation
+
+### Prerequisites
+
+- Python 3.11 or higher
+- IBM Cloud account (for Granite model access)
+- Twilio account (for SMS functionality)
+
+
 
 ## Features
 
@@ -19,65 +60,6 @@ All tool calls for the agents are mocked, so this is using offline synthetic dat
 - **Conversational interface** for gathering details
 - **Comprehensive plans** with sustainability, farming advisory, and market intelligence
 
-## Architecture
-
-The system consists of five specialized agents:
-
-1. **Info Gathering Agent**: Collects necessary details (market research and farming advisory datasets)
-2. **Sustainability Agent**: Recommends sustainable farming practices to reduce environmental impact
-3. **Farm advisor Agent**: Suggests best farming practices based on data and weather forecasts
-4. **Market intelligence Agent**: Recommends market intelligence based on data provided
-5. **Final Planner Agent**: Aggregates all recommendations into a comprehensive  plan
-
-These agents are orchestrated through a LangGraph workflow that enables parallel execution and dynamic routing based on the completeness of gathered information.
-
-## Technical Stack
-
-- **Pydantic AI**: For structured agent definitions and type validation
-- **LangGraph**: For orchestrating the agent workflow and parallel execution
-- **Streamlit**: For building the interactive user interface
-
-## Setup Instructions
-
-### Prerequisites
-
-- Python 3.11 or higher
-- OpenAI or OpenRouter API key (can use Ollama too)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/Multi_agent_sustainable_farming.git
-   cd sustainable-planning-agent
-   ```
-
-2. Set up a virtual environment:
-
-   **Windows**:
-   ```bash
-   python -m venv venv
-   venv\Scripts\activate
-   ```
-
-   **macOS/Linux**:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Create a `.env` file in the root directory and follow the instructions given in `.env.example`:
-   ```
-   PROVIDER=
-   BASE_URL=
-   LLM_API_KEY=
-   MODEL_CHOICE=
-   ```
 
 ### Running the Application
 
@@ -106,7 +88,7 @@ Note that with this demonstration, once the final plan is given to you, the conv
 ## Project Structure
 
 ```
-sustainable-planning-agent/
+
 ├── agents/                                        # Individual agent definitions
 │   ├── sustainability_optimizer_agent.py          # Agent for recommending sustainable farming practices
 │   ├── final_planner_agent.py                     # Agent for creating the final travel plan
